@@ -7,15 +7,15 @@
   
   <title>家禾的第一篇博客文章 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="序言   因为工作需要,我要建立自己的博客,  在B站参考了 codesheep.cn 推荐的博客框架,  https:&#x2F;&#x2F;hexo.io&#x2F;zh-cn&#x2F;, 是用nodejs开发的,正好可以学习一下. 第一章  安装我的博客 安装过程,从安装nodejs开始的一个完整安装过程: 从nodejs官网下载nodejs, 会同时安装 nodejs和npm,安装过后用 node -v和 npm -v测试一下">
+  <meta name="description" content="序言   因找工作需要,我要尝试建立自己的博客,  在B站参考了 codesheep.cn 推荐的博客框架,  https:&#x2F;&#x2F;hexo.io&#x2F;zh-cn&#x2F;, 是用nodejs开发的,正好可以学习一下. 第一章  安装我的博客 安装过程,从安装nodejs开始的一个完整安装过程: 从nodejs官网下载nodejs, 会同时安装 nodejs和npm,安装过后用 node -v和 npm -v测试">
 <meta property="og:type" content="article">
 <meta property="og:title" content="家禾的第一篇博客文章">
 <meta property="og:url" content="http://yoursite.com/2020/07/28/%E5%AE%B6%E7%A6%BE%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="序言   因为工作需要,我要建立自己的博客,  在B站参考了 codesheep.cn 推荐的博客框架,  https:&#x2F;&#x2F;hexo.io&#x2F;zh-cn&#x2F;, 是用nodejs开发的,正好可以学习一下. 第一章  安装我的博客 安装过程,从安装nodejs开始的一个完整安装过程: 从nodejs官网下载nodejs, 会同时安装 nodejs和npm,安装过后用 node -v和 npm -v测试一下">
+<meta property="og:description" content="序言   因找工作需要,我要尝试建立自己的博客,  在B站参考了 codesheep.cn 推荐的博客框架,  https:&#x2F;&#x2F;hexo.io&#x2F;zh-cn&#x2F;, 是用nodejs开发的,正好可以学习一下. 第一章  安装我的博客 安装过程,从安装nodejs开始的一个完整安装过程: 从nodejs官网下载nodejs, 会同时安装 nodejs和npm,安装过后用 node -v和 npm -v测试">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-07-27T19:26:46.000Z">
-<meta property="article:modified_time" content="2020-07-28T07:14:53.546Z">
+<meta property="article:modified_time" content="2020-07-28T16:46:06.971Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -89,13 +89,16 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h1 id="序言"><a href="#序言" class="headerlink" title="序言"></a>序言</h1><hr>
-<p>  因为工作需要,我要建立自己的博客,<br>  在B站参考了 codesheep.cn 推荐的博客框架,<br>  <a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">https://hexo.io/zh-cn/</a>, 是用nodejs开发的,正好可以学习一下.</p>
+<p>  因找工作需要,我要尝试建立自己的博客,<br>  在B站参考了 codesheep.cn 推荐的博客框架,<br>  <a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">https://hexo.io/zh-cn/</a>, 是用nodejs开发的,正好可以学习一下.</p>
 <h2 id="第一章-安装我的博客"><a href="#第一章-安装我的博客" class="headerlink" title="第一章  安装我的博客"></a>第一章  安装我的博客</h2><hr>
 <h3 id="安装过程-从安装nodejs开始的一个完整安装过程"><a href="#安装过程-从安装nodejs开始的一个完整安装过程" class="headerlink" title="安装过程,从安装nodejs开始的一个完整安装过程:"></a>安装过程,从安装nodejs开始的一个完整安装过程:</h3><ol>
-<li>从nodejs官网下载nodejs, 会同时安装 nodejs和npm,安装过后用 node -v和 npm -v测试一下.</li>
-<li>将npm的镜像文件下载转到国内的镜像,可加快模块的下载速度.<br>执行命令,安装淘宝的cnpm管理器.<br>‘ npm install -g cnpm –registry=<a href="https://registry.npm.taobao.org" target="_blank" rel="noopener">https://registry.npm.taobao.org</a> ‘<br>‘ cnpm -v ‘<br>注意:<br>在win10必须用 nodejs的控制台,修改 npm为国内的镜像源, 若安装出错就重装.<br>但是安装过程一直错,我后来想到可能是本地的商业路由器加了限制.<br>就换了我自己的物联网卡做热点,之后就可以顺利执行了,一个小坑下次看好.</li>
+<li><p>从nodejs官网下载nodejs, 会同时安装 nodejs和npm,安装过后用 node -v和 npm -v测试一下.</p>
+</li>
+<li><p>将npm的镜像文件下载转到国内的镜像,可加快模块的下载速度.<br>执行命令,安装淘宝的cnpm管理器.<br>‘’’<br>npm install -g cnpm –registry=<a href="https://registry.npm.taobao.org" target="_blank" rel="noopener">https://registry.npm.taobao.org</a> ‘<br>cnpm -v<br>‘’’<br>注意有两个坑:<br>‘’’<br>我发现在执行 npm 命令时,总是安装失败,经过多此尝试,发现我的网络和系统可能都有问题:<br>我用的Win10系统,发现一般控制台中执行 某些npm命令还是会安装失败.<br>最好用node.js自己的控制台(在开始菜单中找 Node.js command prompt) 执行npm.<br>如: 修改 npm为国内淘宝的镜像源.就必须用 node.js自己的控制台.</p>
+<p>后来还是提示有安装错误,因为我连接的是宿舍路由器,我怀疑可能有端口被限制了.<br>就换了我自己的物联网卡做热点上网,让我的笔记本连上热点(估计手机的4G热点也是可以的),<br>之后就可以顺利执行npm安装了.<br>‘’’</p>
+</li>
 </ol>
-<p>3.安装 hexo 框架,这个就是nodejs写的博客框架<br>‘’’<br>  cnpm install -g hexo-cli<br>  hexo -v<br>‘’’<br>4.创建并测试博客框架<br>‘’’<br>  mkdir  blog  // 创建博客目录<br>  cd blog      // 进入博客目录<br>  hexo init    // 生成博客,初始化博客<br>  hexo s       // 启动本地博客服务,启动的是nodejs服务器,从控制台返回的信息<br>               // <a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a>, 提示打开浏览器.<br>‘’’<br> 可以在浏览器里,看一下博客中创建的 hello world文章.               </p>
+<p>3.安装 hexo 框架,这个就是nodejs写的博客框架<br>‘’’<br>  cnpm install -g hexo-cli<br>  hexo -v<br>‘’’<br>4.创建并测试博客框架,执行如下命令:<br>‘’’<br>  mkdir blog    ‘ 创建博客目录<br>  cd blog       ‘ 进入博客目录<br>  hexo init     ‘ 生成博客,初始化博客<br>  hexo s        ‘ 启动本地博客服务,启动的是nodejs服务器,从控制台返回的信息<br>‘’’<br> 看到控制台提示的网址信息 <a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a> 后,打开浏览器.<br> 可以在浏览器里,看一下博客默认创建的 hello world 文章.               </p>
 <h2 id="第二章-管理我的博客"><a href="#第二章-管理我的博客" class="headerlink" title="第二章  管理我的博客"></a>第二章  管理我的博客</h2><hr>
 <h3 id="创建我的第一个博客文章"><a href="#创建我的第一个博客文章" class="headerlink" title="创建我的第一个博客文章"></a>创建我的第一个博客文章</h3><p>1.在控制台,注意在博客的根目录执行:  hexo n “我的第一篇文章”<br>  会在下面返回文章文件的保存位置.  ./source/_posts</p>
 <p>2.修改我的文章,在win10中也具有vim,或是其他的文本编译工具,写的是md格式.<br>3.修改文件之后,序号顺序执行 </p>
@@ -106,14 +109,14 @@
 </li>
 <li><p>在博客的跟目录中,下载一个git部署插件.<br>cnpm install –save hexo-deployer-git</p>
 </li>
-<li><p>设置 _config.yml,找到 deploy: 字段后, 修改如下:<br> type: git<br> repository: <a href="https://github.com/tianjiahe/tianjiahe.github.io.git" target="_blank" rel="noopener">https://github.com/tianjiahe/tianjiahe.github.io.git</a><br> branch: master</p>
+<li><p>设置 _config.yml,找到 deploy: 字段后, 修改如下:<br>‘’’<br> type: git<br> repository: <a href="https://github.com/tianjiahe/tianjiahe.github.io.git" target="_blank" rel="noopener">https://github.com/tianjiahe/tianjiahe.github.io.git</a><br> branch: master<br>‘’’</p>
 </li>
-<li><p>最后在控制台执行: hexo d   // deploy 部署到远端<br>也可以合并执行    hexo clean &amp;&amp; hexo d<br>注意: </p>
-<p>   在wind10上执行上传到git的操作, 过程中会出错,因为需要鉴权.<br>   执行 如下在需要上传得到目录上打开  Git GUI here ,配置当前git用户的参数,顺序输入如下命令:</p>
-<pre><code>$ git config --global user.email &quot;390389348@qq.com&quot;
-$ git config --global user.name &quot;tianjiahe&quot;</code></pre><p>   执行github客户端鉴权后, hexo deploy 命令也必须再 Git GUI here 的控制台执行,否则还是错的.    </p>
-</li>
-<li><p>访问github地址<br>  <a href="https://tianjiahe.github.io/" target="_blank" rel="noopener">https://tianjiahe.github.io/</a>  ,用户名称.仓库名称          </p>
+<li><p>之后,在控制台执行: hexo d   // deploy 部署到远端<br>也可以合并执行     hexo clean &amp;&amp; hexo d<br>‘’’<br>注意: </p>
+<p>   在wind10上执行hexo d 上传到git的操作时会出错,提示需要鉴权.<br>   这里就要用到git的控制台了,<br>   找到我的博客文件夹,鼠标选中后右键弹出菜单中, 打开 Git Bash here,<br>   顺序输入如下命令,配置当前git用户的访问参数:</p>
+<pre><code>$ git config --global user.email &quot;xxxxxxxxx@qq.com&quot;
+$ git config --global user.name &quot;tianjiahe&quot;</code></pre><p>   执行github客户端鉴权后, hexo deploy 命令也必须再 Git GUI here 的控制台执行,否则还是有错.    </p>
+<pre><code>$ hexo d            </code></pre></li>
+<li><p>访问github上的自己的博客地址,用户名称.仓库名称.<br><a href="https://tianjiahe.github.io/" target="_blank" rel="noopener">https://tianjiahe.github.io/</a>  <a href="https://tianjiahe.github.io/" target="_blank" rel="noopener">家禾的博客</a>           </p>
 </li>
 </ol>
 <hr>
@@ -124,7 +127,7 @@ $ git config --global user.name &quot;tianjiahe&quot;</code></pre><p>   执行gi
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/07/28/%E5%AE%B6%E7%A6%BE%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" data-id="ckd5lv3p9000074tn1woy7kr2" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/07/28/%E5%AE%B6%E7%A6%BE%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" data-id="ckd669x4a00036gtn2qy00wwy" class="article-share-link">Share</a>
       
       
     </footer>
@@ -180,6 +183,14 @@ $ git config --global user.name &quot;tianjiahe&quot;</code></pre><p>   执行gi
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2020/07/28/markdown%E6%96%87%E4%BB%B6%E7%9A%84%E4%BD%BF%E7%94%A8%E6%B5%8B%E8%AF%95Demo/">markdown文件的使用测试Demo</a>
+          </li>
+        
+          <li>
+            <a href="/2020/07/28/%E6%88%91%E7%9A%84%E5%B7%A5%E4%B8%9A%E7%89%A9%E8%81%94%E7%BD%91%E9%A1%B9%E7%9B%AEDemo/">我的工业物联网项目Demo</a>
+          </li>
         
           <li>
             <a href="/2020/07/28/%E6%88%91%E7%9A%84github%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/">我的github使用手册</a>
