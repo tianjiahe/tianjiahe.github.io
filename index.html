@@ -111,7 +111,7 @@ git push -u origin master      </code></pre>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/07/28/%E6%88%91%E7%9A%84github%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/" data-id="ckd5lbtiv0002r4tngdoo6wna" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/07/28/%E6%88%91%E7%9A%84github%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/" data-id="ckd5lqs8d000160tnhqrl86yk" class="article-share-link">Share</a>
       
       
     </footer>
@@ -157,11 +157,17 @@ git push -u origin master      </code></pre>
 <p>  hexo clean   // 清空数据库<br>  hexo g       // g是生成新的<br>  hexo s       // 重启服务器  </p>
 <p> 在打开浏览器看一下自己的博客,简单.  </p>
 <h2 id="第三章-部署到-github-上"><a href="#第三章-部署到-github-上" class="headerlink" title="第三章 部署到 github 上"></a>第三章 部署到 github 上</h2><ol>
-<li>浏览器登录我的github,并新建一个repository<br>新的仓库名称 必须是:  我的名称.github.io<br>必须写成: tianjiahe.github.io<br>以后就可以在浏览器中输入 tianjiahe ,就可以访问了.</li>
-<li>在博客的跟目录中,下载一个git部署插件.<br>cnpm install –save hexo-deployer-git</li>
-<li>设置 _config.yml,找到 deploy: 字段后, 修改如下:<br> type: git<br> repository: <a href="https://github.com/tianjiahe/tianjiahe.github.io.git" target="_blank" rel="noopener">https://github.com/tianjiahe/tianjiahe.github.io.git</a><br> branch: master</li>
-<li>最后在控制台执行: hexo d   // deploy 部署到远端<br>注意:<br>   在wind10上执行上传到git的操作,直接执行 hexo d 的过程中会出错,因为需要鉴权.<br>   执行 如下在需要上传得到目录上打开  Git GUI here ,配置当前git用户的参数,顺序输入如下命令:<pre><code>$ git config --global user.email &quot;390389348@qq.com&quot;
-$ git config --global user.name &quot;tianjiahe&quot;</code></pre></li>
+<li><p>浏览器登录我的github,并新建一个repository<br>新的仓库名称 必须是:  我的名称.github.io<br>必须写成: tianjiahe.github.io<br>以后就可以在浏览器中输入 tianjiahe ,就可以访问了.</p>
+</li>
+<li><p>在博客的跟目录中,下载一个git部署插件.<br>cnpm install –save hexo-deployer-git</p>
+</li>
+<li><p>设置 _config.yml,找到 deploy: 字段后, 修改如下:<br> type: git<br> repository: <a href="https://github.com/tianjiahe/tianjiahe.github.io.git" target="_blank" rel="noopener">https://github.com/tianjiahe/tianjiahe.github.io.git</a><br> branch: master</p>
+</li>
+<li><p>最后在控制台执行: hexo d   // deploy 部署到远端<br>也可以合并执行    hexo clean &amp;&amp; hexo d<br>注意: </p>
+<p>   在wind10上执行上传到git的操作, 过程中会出错,因为需要鉴权.<br>   执行 如下在需要上传得到目录上打开  Git GUI here ,配置当前git用户的参数,顺序输入如下命令:</p>
+<pre><code>$ git config --global user.email &quot;390389348@qq.com&quot;
+$ git config --global user.name &quot;tianjiahe&quot;</code></pre><p>   执行github客户端鉴权后, hexo deploy 命令也必须再 Git GUI here 的控制台执行,否则还是错的.    </p>
+</li>
 </ol>
 <hr>
 <h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><hr>
@@ -171,7 +177,7 @@ $ git config --global user.name &quot;tianjiahe&quot;</code></pre></li>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/07/28/%E5%AE%B6%E7%A6%BE%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" data-id="ckd5lbthy0000r4tn3hgm43bl" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/07/28/%E5%AE%B6%E7%A6%BE%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" data-id="ckd5lqs8e000260tn51id42ko" class="article-share-link">Share</a>
       
       
     </footer>
@@ -220,7 +226,7 @@ $ git config --global user.name &quot;tianjiahe&quot;</code></pre></li>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/07/28/hello-world/" data-id="ckd5lbti80001r4tn3yj5fmyf" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/07/28/hello-world/" data-id="ckd5lqs7v000060tnhv6egui4" class="article-share-link">Share</a>
       
       
     </footer>
