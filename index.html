@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-我的github使用手册" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/07/28/%E6%88%91%E7%9A%84github%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/" class="article-date">
+  <time datetime="2020-07-28T05:39:47.000Z" itemprop="datePublished">2020-07-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/07/28/%E6%88%91%E7%9A%84github%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/">我的github使用手册</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="序言"><a href="#序言" class="headerlink" title="序言"></a>序言</h1><h2 id="记录我-使用Github的一些操作过程"><a href="#记录我-使用Github的一些操作过程" class="headerlink" title="记录我 使用Github的一些操作过程"></a>记录我 使用Github的一些操作过程</h2><pre><code>github的很多命令不常用,我也没时间去研究,这里仅针对我实际使用中的命令做记录</code></pre><h1 id="准备工作-本地文件夹做成github仓库"><a href="#准备工作-本地文件夹做成github仓库" class="headerlink" title="准备工作, 本地文件夹做成github仓库"></a>准备工作, 本地文件夹做成github仓库</h1><p>  选定一个目录作为git 仓库<br>  这里选中 test文件夹后鼠标右键,打开 Git Bash here ,打开一个git控制台. 执行如下命令</p>
+<pre><code>1.  git init               &apos;将当前文件夹初始化git，将其变成可管理的仓库；
+                           &apos;此时，test目录下会有一个“.git&quot;的文件夹（是一个隐藏的文件夹），文件查看属性将其显示
+2.    git add README.md      &apos;将项目添加到仓库,若全部添加 git add . 即可
+3.     git status             &apos;可查看一些当前的添加的状态.
+4.     git commit -m &quot;first commit&quot;  &apos;将项目提交到github（注意步骤很重要，若忘记这一步骤，导致后面一直报错,记住先提交）
+5.   ssh-keygen -t rsa -C &quot;XXXXXX@qq.com   &apos;本地仓库和远程的github是通过Https或者是SSH来连接的，所以要设置一下远程的仓库。
+                                          创建ssh key. 邮箱是你gihub注册的邮箱地址）；
+                                          然后在C盘的用户目录下一个.ssh文件夹(C:\Users\tianjiahe\.ssh)，打开里面有两个文件
+
+6. 在github网站上,找到设置页面 https://github.com/settings/keys, 的 [SSH and GPG key](https://github.com/settings/keys)项.
+   创建一个ssh Key,点击New SSh key.Title可以随便写，
+   Key里的值将C盘下.ssh里的id_rsa.pub中的内容全部复制到这即可，最后点击Add SSh key。
+
+7. 再在github上创建一个仓库,作为远程仓库. (Repository= test,实际上传地址:https://github.com/tianjiahe/test.git )
+
+8. git remote add origin *    &apos; 将以上网址copy 到 * 处,    
+                              &apos; git remote add origin https://github.com/tianjiahe/test.git 
+9. git push -u origin master  &apos;最后一步把提交后的文件推送上去.</code></pre><h1 id="以后再上传文件-执行如下命令"><a href="#以后再上传文件-执行如下命令" class="headerlink" title="以后再上传文件,执行如下命令"></a>以后再上传文件,执行如下命令</h1><pre><code>git add  filename
+git commit -m &quot;xxx&quot; 
+git remote add origin https://github.com/tianjiahe/test.git
+git push -u origin master      </code></pre>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/07/28/%E6%88%91%E7%9A%84github%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/" data-id="ckd5lbtiv0002r4tngdoo6wna" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-家禾的第一篇博客文章" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/07/28/%E5%AE%B6%E7%A6%BE%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" class="article-date">
+  <time datetime="2020-07-27T19:26:46.000Z" itemprop="datePublished">2020-07-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/07/28/%E5%AE%B6%E7%A6%BE%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/">家禾的第一篇博客文章</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="序言"><a href="#序言" class="headerlink" title="序言"></a>序言</h1><hr>
+<p>  因为工作需要,我要建立自己的博客,<br>  在B站参考了 codesheep.cn 推荐的博客框架,<br>  <a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">https://hexo.io/zh-cn/</a>, 是用nodejs开发的,正好可以学习一下.</p>
+<h2 id="第一章-安装我的博客"><a href="#第一章-安装我的博客" class="headerlink" title="第一章  安装我的博客"></a>第一章  安装我的博客</h2><hr>
+<h3 id="安装过程-从安装nodejs开始的一个完整安装过程"><a href="#安装过程-从安装nodejs开始的一个完整安装过程" class="headerlink" title="安装过程,从安装nodejs开始的一个完整安装过程:"></a>安装过程,从安装nodejs开始的一个完整安装过程:</h3><ol>
+<li>从nodejs官网下载nodejs, 会同时安装 nodejs和npm,安装过后用 node -v和 npm -v测试一下.</li>
+<li>将npm的镜像文件下载转到国内的镜像,可加快模块的下载速度.<br>执行命令,安装淘宝的cnpm管理器.<br>‘ npm install -g cnpm –registry=<a href="https://registry.npm.taobao.org" target="_blank" rel="noopener">https://registry.npm.taobao.org</a> ‘<br>‘ cnpm -v ‘<br>注意:<br>在win10必须用 nodejs的控制台,修改 npm为国内的镜像源, 若安装出错就重装.<br>但是安装过程一直错,我后来想到可能是本地的商业路由器加了限制.<br>就换了我自己的物联网卡做热点,之后就可以顺利执行了,一个小坑下次看好.</li>
+</ol>
+<p>3.安装 hexo 框架,这个就是nodejs写的博客框架<br>‘’’<br>  cnpm install -g hexo-cli<br>  hexo -v<br>‘’’<br>4.创建并测试博客框架<br>‘’’<br>  mkdir  blog  // 创建博客目录<br>  cd blog      // 进入博客目录<br>  hexo init    // 生成博客,初始化博客<br>  hexo s       // 启动本地博客服务,启动的是nodejs服务器,从控制台返回的信息<br>               // <a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a>, 提示打开浏览器.<br>‘’’<br> 可以在浏览器里,看一下博客中创建的 hello world文章.               </p>
+<h2 id="第二章-管理我的博客"><a href="#第二章-管理我的博客" class="headerlink" title="第二章  管理我的博客"></a>第二章  管理我的博客</h2><hr>
+<h3 id="创建我的第一个博客文章"><a href="#创建我的第一个博客文章" class="headerlink" title="创建我的第一个博客文章"></a>创建我的第一个博客文章</h3><p>1.在控制台,注意在博客的根目录执行:  hexo n “我的第一篇文章”<br>  会在下面返回文章文件的保存位置.  ./source/_posts</p>
+<p>2.修改我的文章,在win10中也具有vim,或是其他的文本编译工具,写的是md格式.<br>3.修改文件之后,序号顺序执行 </p>
+<p>  hexo clean   // 清空数据库<br>  hexo g       // g是生成新的<br>  hexo s       // 重启服务器  </p>
+<p> 在打开浏览器看一下自己的博客,简单.  </p>
+<h2 id="第三章-部署到-github-上"><a href="#第三章-部署到-github-上" class="headerlink" title="第三章 部署到 github 上"></a>第三章 部署到 github 上</h2><ol>
+<li>浏览器登录我的github,并新建一个repository<br>新的仓库名称 必须是:  我的名称.github.io<br>必须写成: tianjiahe.github.io<br>以后就可以在浏览器中输入 tianjiahe ,就可以访问了.</li>
+<li>在博客的跟目录中,下载一个git部署插件.<br>cnpm install –save hexo-deployer-git</li>
+<li>设置 _config.yml,找到 deploy: 字段后, 修改如下:<br> type: git<br> repository: <a href="https://github.com/tianjiahe/tianjiahe.github.io.git" target="_blank" rel="noopener">https://github.com/tianjiahe/tianjiahe.github.io.git</a><br> branch: master</li>
+<li>最后在控制台执行: hexo d   // deploy 部署到远端<br>注意:<br>   在wind10上执行上传到git的操作,直接执行 hexo d 的过程中会出错,因为需要鉴权.<br>   执行 如下在需要上传得到目录上打开  Git GUI here ,配置当前git用户的参数,顺序输入如下命令:<pre><code>$ git config --global user.email &quot;390389348@qq.com&quot;
+$ git config --global user.name &quot;tianjiahe&quot;</code></pre></li>
+</ol>
+<hr>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><hr>
+<p>*<a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">https://hexo.io/zh-cn/</a> , <a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">快速、简洁且高效的博客框架</a><br>*<a href="https://www.codesheep.cn/" target="_blank" rel="noopener">https://www.codesheep.cn/</a> ,<a href="https://www.codesheep.cn/" target="_blank" rel="noopener">程序羊的博客</a></p>
+<p>原创不易，如需转载，请标明出处！</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/07/28/%E5%AE%B6%E7%A6%BE%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" data-id="ckd5lbthy0000r4tn3hgm43bl" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/07/28/hello-world/" class="article-date">
+  <time datetime="2020-07-27T18:48:20.939Z" itemprop="datePublished">2020-07-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/07/28/hello-world/">Hello World</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/07/28/hello-world/" data-id="ckd5lbti80001r4tn3yj5fmyf" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/07/28/%E6%88%91%E7%9A%84github%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/">我的github使用手册</a>
+          </li>
+        
+          <li>
+            <a href="/2020/07/28/%E5%AE%B6%E7%A6%BE%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/">家禾的第一篇博客文章</a>
+          </li>
+        
+          <li>
+            <a href="/2020/07/28/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
