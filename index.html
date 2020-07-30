@@ -590,10 +590,10 @@ $ git config --global user.name &quot;tianjiahe&quot;</code></pre><p>   执行gi
 <li><p>最后可以访问github上的自己的博客地址了, 用户名称.仓库名称.</p>
 <h2 id="https-tianjiahe-github-io-家禾的博客"><a href="#https-tianjiahe-github-io-家禾的博客" class="headerlink" title="https://tianjiahe.github.io/  家禾的博客"></a><a href="https://tianjiahe.github.io/" target="_blank" rel="noopener">https://tianjiahe.github.io/</a>  <a href="https://tianjiahe.github.io/" target="_blank" rel="noopener">家禾的博客</a></h2></li>
 </ol>
-<h2 id="第四章-更改Blog的主题"><a href="#第四章-更改Blog的主题" class="headerlink" title="第四章 更改Blog的主题"></a>第四章 更改Blog的主题</h2><h1 id="用-yilia-主题"><a href="#用-yilia-主题" class="headerlink" title="用 yilia 主题"></a>用 yilia 主题</h1><blockquote>
-<p>. 下载 yilia 主题 ,Git中输入 git clone <a href="http://github.com/litten/hexo-theme-yilia.git" target="_blank" rel="noopener">http://github.com/litten/hexo-theme-yilia.git</a><br>      克隆到本地的 themes/yilia 目录</p>
-</blockquote>
-<hr>
+<h2 id="第四章-更改Blog的主题"><a href="#第四章-更改Blog的主题" class="headerlink" title="第四章 更改Blog的主题"></a>第四章 更改Blog的主题</h2><h1 id="用-yilia-主题"><a href="#用-yilia-主题" class="headerlink" title="用 yilia 主题"></a>用 yilia 主题</h1><p>   .下载 yilia 主题 ,Git中输入 git clone <a href="http://github.com/litten/hexo-theme-yilia.git" target="_blank" rel="noopener">http://github.com/litten/hexo-theme-yilia.git</a><br>    克隆到本地的 themes/yilia 目录<br>   . 找到blog目录下的_config.yml,  修改 theme: yilia<br>   . 执行: hexo clean &amp;&amp; hexo d , 推送修改后的内容.</p>
+<h1 id="处理模块确实问题"><a href="#处理模块确实问题" class="headerlink" title="处理模块确实问题:"></a>处理模块确实问题:</h1><p>   在博客主页上 点击 “所用文档”连接,会在旁边的出现提示.下面时拷贝的文字内容.<br>   ‘’’<br>   缺失模块。<br>    1、请确保node版本大于6.2<br>    2、在博客根目录（注意不是yilia根目录）执行以下命令：<br>       npm i hexo-generator-json-content –save<br>    3、在根目录_config.yml里添加配置：</p>
+<p>  jsonContent:<br>    meta: false<br>    pages: false<br>    posts:<br>      title: true<br>      date: true<br>      path: true<br>      text: false<br>      raw: false<br>      content: false<br>      slug: false<br>      updated: false<br>      comments: false<br>      link: false<br>      permalink: false<br>      excerpt: false<br>      categories: false<br>      tags: true </p>
+<pre><code>照做就好  </code></pre><hr>
 <h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><hr>
 <p>*<a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">https://hexo.io/zh-cn/</a> , <a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">快速、简洁且高效的博客框架</a><br>*<a href="https://www.codesheep.cn/" target="_blank" rel="noopener">https://www.codesheep.cn/</a> ,<a href="https://www.codesheep.cn/" target="_blank" rel="noopener">程序羊的博客</a></p>
 <p>原创不易，如需转载，请标明出处！</p>
